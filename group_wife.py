@@ -17,7 +17,7 @@ async def get_group_memberlist(bot: Bot, group_id: int):
 
 def get_top_n(lst: List[Dict[str, Any]], num: int = 50):
     """
-    获取活跃度前 num 名群成员的 QQ 和 群名片
+    获取按最近发言时间排序前 num 名群成员的 QQ 和 群名片
     """
     if num > len(lst):
         return [(i["user_id"], i["card"], i["nickname"]) for i in lst]
@@ -32,7 +32,7 @@ async def want_wife(bot: Bot, event: GroupMessageEvent):
 
 
 groupwife = on_message(rule=want_wife, priority=50, block=True)
-cooldown_prompt = ("快醒醒", "你哪来的老婆", "才不到一分钟就要换老婆了嘛？", "")
+cooldown_prompt = ("快醒醒", "你哪来的老婆", "才不到一分钟就要换老婆了嘛？")
 exclude_user = (
     2854196310, # Q群管家
 )
