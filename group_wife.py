@@ -9,7 +9,6 @@ from nonebot.exception import ActionFailed
 from nonebot.permission import SUPERUSER
 from nonebot.matcher import Matcher
 from nonebot.params import RegexGroup
-from sympy import true
 
 
 class Config:
@@ -117,7 +116,7 @@ async def h1(bot: Bot, event: GroupMessageEvent):
 
 
 pattern = r"^群?老婆([1-9]\d?|[二三四五六七八九十])[抽连]抽?$"
-open_harem = on_regex(pattern, priority=50, block=true)
+open_harem = on_regex(pattern, priority=50, block=True)
 """开后宫"""
 
 
