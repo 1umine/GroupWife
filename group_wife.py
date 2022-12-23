@@ -75,7 +75,7 @@ def choose_wife(wife_list: list, exclude: Union[list, tuple], n: int = 1):
 
     n: 选几个
     """
-    for w in wife_list:
+    for w in wife_list.copy():
         if w[0] in exclude:
             wife_list.remove(w)
     if len(wife_list) >= n:
